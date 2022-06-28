@@ -21,9 +21,30 @@ body{
     height: 100%;
     background-color: blue;
 }
-#left-content-header{
+header{
     height: 7%;
+    padding: 5px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+}
+.left-header{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+.right-header{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #b1b1b1;
+}
+.right-header i{
+    margin: 0 7px;
+}
+header img{
+    width: 30px;
+    border-radius: 50%;
 }
 #call-to-action{
     height: 8%;
