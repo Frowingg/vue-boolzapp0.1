@@ -22,6 +22,9 @@ body{
     background-color: blue;
 }
 /* HEADER */
+#left-content header{
+    border-right: 1px solid #d7d7d7; 
+}
 header{
     height: 7%;
     padding: 5px;
@@ -126,8 +129,41 @@ header img{
     margin-top: 5px;
 }
 
+/* RIGHT CONTENT */
 #right-content{
     width: 60%;
     height: 100%;
     background-color: violet;
+}
+.right-left-header{
+    display: flex;
+    flex-direction: column;
+}
+/* MAIN */
+main{
+    height: 87%;
+    background-image: url(../img/mine.jpg);
+}
+
+/* FOOTER */
+footer{
+    height: 7%;
+    background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#emoticon-area{
+    margin-right: 30px;
+}
+
+#input-area{
+    width: 95%;
+    height: 80%;
+}
+input{
+    height: 100%;
+    width: 95%;
+    padding-left: 10px;
 }
