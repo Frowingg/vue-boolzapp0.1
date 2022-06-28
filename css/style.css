@@ -21,6 +21,7 @@ body{
     height: 100%;
     background-color: blue;
 }
+/* HEADER */
 header{
     height: 7%;
     padding: 5px;
@@ -46,10 +47,36 @@ header img{
     width: 30px;
     border-radius: 50%;
 }
+
+/* CALL TO ACTION */
 #call-to-action{
     height: 8%;
     background-color: #8edafb;
+    padding: 7px 13px;
+    display: flex;
 }
+#left-call-to-action{
+    background-color: white;
+    width: min-content;
+    padding: 8px;
+    border-radius: 50%;
+}
+#left-call-to-action i{
+    color: #8edafb;
+}
+#right-call-to-action{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+#right-call-to-action p{
+    font-size: 13px;
+}
+#right-call-to-action a{
+    font-size: 10px;
+    color: gray;
+}
+
 #search-bar{
     height: 5%;
     background-color: #fff;
