@@ -10,103 +10,103 @@
     <title>Vue Boolzapp</title>
 </head>
 <body>
-    
-    <div id="container">
+    <div id="root">
+        <div id="container">
 
-        <!-- LEFT CONTENT -->
-        <div id="left-content">
+            <!-- LEFT CONTENT -->
+            <div id="left-content">
 
-            <!-- HEADER -->
-            <header>
+                <!-- HEADER -->
+                <header>
 
-                <div class="left-header">
-                    <img src="img/avatar_io.jpg" alt="me">
-                    <p>Nome Utente</p>
-                </div>
-                <div class="right-header">
-                    <i class="fa-regular fa-circle"></i>
-                    <i class="fa-solid fa-message"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
+                    <div class="left-header">
+                        <img src="img/avatar_io.jpg" alt="me">
+                        <p>Nome Utente</p>
+                    </div>
+                    <div class="right-header">
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
 
-            </header>
+                </header>
 
-            <!-- CALL TO ACTION -->
-            <div id="call-to-action">
-                <div id="left-call-to-action">
-                    <i class="fa-solid fa-bell-slash"></i>
-                </div>
+                <!-- CALL TO ACTION -->
+                <div id="call-to-action">
+                    <div id="left-call-to-action">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
 
-                <div id="right-call-to-action">
-                    <p>Ricevi notifiche di nuovi messaggi</p>
-                    <span><a href="#">Attiva notifiche desktop</a></span>
-                </div>
-            </div>
-
-            <!-- SEARCH BAR -->
-            <div id="search">
-                <div id="search-bar">
-                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                    <input id="search" type="text" placeholder="Cerca o inizia nuova chat"> 
-                </div>
-
-            </div>
-
-            <!-- CONTACT AREA -->
-            <div id="contact-area">
-                <!-- <div class="singleContact">
-                    <img src="img/avatar_1.jpg" alt="avatar1">
-                    <p>Michele</p>
-                </div> -->
-            </div>
-
-        </div>
-
-
-        <!-- RIGHT CONTENT -->
-        <div id="right-content">
-            <header>
-                <div class="left-header">
-                    <img src="img/{{}}" alt="{{}}">
-
-                    <div class="right-left-header">
-                        <p>{{}}</p> 
-                        <span>{{}}</span>
+                    <div id="right-call-to-action">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <span><a href="#">Attiva notifiche desktop</a></span>
                     </div>
                 </div>
 
-                <div class="right-header">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-paperclip"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-
-            </header>
-
-            <main>
-                <div id="chat">
+                <!-- SEARCH BAR -->
+                <div id="search">
+                    <div id="search-bar">
+                        <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                        <input id="search" type="text" placeholder="Cerca o inizia nuova chat"> 
+                    </div>
 
                 </div>
-            </main>
 
-            <footer>
-                
-                <div id="emoticon-area">
-                    <i class="fa-regular fa-face-smile"></i>
-                </div>
-                
-                <div id="input-area">
-                    <input placeholder="Scrivi un messaggio" type="text">
+                <!-- CONTACT AREA -->
+                <div id="contact-area">
+                    <div @click="selectThisChat(index)" v-for="(singleCon, index) in contacts" class="singleContact">
+                        <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" :alt="contacts[index].name">
+                        <p>{{contacts[index].name}}</p>
+                    </div>
                 </div>
 
-                <div id="microfone-area">
-                    <i class="fa-solid fa-microphone"></i>
-                </div>
+            </div>
 
-            </footer>
+
+            <!-- RIGHT CONTENT -->
+            <div id="right-content">
+                <header>
+                    <div class="left-header">
+                        <img :src="'img/avatar' + contacts[currentElement].avatar + '.jpg'" :alt="contacts[currentElement].name"> 
+
+                        <div class="right-left-header">
+                            <p>{{contacts[currentElement].name}}</p> 
+                            <span>{{contacts[currentElement].messages.date}}</span>
+                        </div>
+                    </div>
+
+                    <div class="right-header">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+
+                </header>
+
+                <main>
+                    <div id="chat">
+
+                    </div>
+                </main>
+
+                <footer>
+                    
+                    <div id="emoticon-area">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    
+                    <div id="input-area">
+                        <input placeholder="Scrivi un messaggio" type="text">
+                    </div>
+
+                    <div id="microfone-area">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+
+                </footer>
+            </div>
         </div>
     </div>
-
 
     <script src="js/script.js"></script>
 </body>
